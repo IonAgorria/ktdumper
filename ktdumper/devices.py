@@ -1605,6 +1605,13 @@ DEVICES = [
     }, payload_base=0xE55B0000, fatal_err=0x60c04848, usb_interrupt=0x60C02000, usb_getch=0x60c03f14, usb_send=0x60c04118, usb_send_commit=0x60c03a94,
        onenand_addr=0x30000000),
 
+    Device("f-07c", 0x04c5, 0x122d, {
+        "onenand_id": ShSrecExploitOnenandId_v2(),
+        "dump_nand": ShSrecExploitOnenandFast_v2(),
+        "probe_onenand": ShSrecExploitProbeOnenand_v2(sweep_start=0x0),
+    }, payload_base=0xE55B0000, fatal_err=0x60c04848, usb_interrupt=0x60C02000, usb_getch=0x60c03f14, usb_send=0x60c04118, usb_send_commit=0x60c03a94,
+       onenand_addr=0x30000000),
+
     Device("f-08c", 0x04c5, 0x122f, {
         "onenand_id": ShSrecExploitOnenandId_v2(),
         "dump_nand": ShSrecExploitOnenandFast_v2(),
